@@ -1,0 +1,13 @@
+.Invoice-summary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Invoice-summary-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Invoice-summary-detail-total {
+  font-weight: bold;
+}
