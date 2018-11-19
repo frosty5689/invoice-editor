@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "immutability-helper": "^2.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.1.1",
     "react-scripts": "1.0.10",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "^15.6.1",
+    "redux": "^4.0.1",
+    "underscore": "^1.9.1"
   },
   "scripts": {
     "start": "react-scripts start",

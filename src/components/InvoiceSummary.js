@@ -1,10 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getLineItems } from '../redux/selectors';
 
 import '../css/InvoiceSummary.css';
 
-function InvoiceSummary(props) {
-  const items = props.items;
-  const subtotal = getSubtotal(items);
+const InvoiceSummary = ({ lineItems }) => {
+  const subtotal = getSubtotal(lineItems);
   const tax = getTax(subtotal);
   const total = subtotal + tax;
 
@@ -32,7 +33,7 @@ function InvoiceSummary(props) {
 }
 
 function getSubtotal(items) {
-  const subtotal = items.reduce((sum, item) => { return sum + item.price * item.quantity }, 0);
+  const subtotal = items.reduce((sum, item) => { return sum + item.content.price * item.content.quantity }, 0);
   return subtotal;
 }
 
@@ -44,4 +45,9 @@ function toCurrency(number) {
   return number.toFixed(2);
 }
 
-export default InvoiceSummary;
+const mapStateToProps = state => {
+  const lineItems = getLineItems(state);
+  return { lineItems };
+}
+
+export default connect(mapStateToProps)(InvoiceSummary);
