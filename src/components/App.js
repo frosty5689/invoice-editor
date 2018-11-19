@@ -2,6 +2,8 @@ import React from 'react';
 import logo from '../assets/logo.svg';
 import '../css/App.css';
 
+import Invoice from './Invoice';
+
 class App extends React.Component {
   render() {
     return (
@@ -10,10 +12,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Invoice Editor</h2>
         </div>
-
-        { /* Insert your code here */}
-
-        <div>hello world</div>
+        <Invoice />
       </div>
     );
   }

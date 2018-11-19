@@ -1,0 +1,62 @@
+.Invoice {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+.Invoice table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+}
+
+.Invoice td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+.Invoice table tr td:nth-child(5) {
+  width: 20px;
+}
+
+.Invoice table tr.Invoice-head td {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+
+.Invoice table tr.Invoice-item td{
+  border-bottom: 1px solid #eee;
+}
+
+.Invoice-summary-first td:nth-child(4) {
+  border-top: 2px solid #ddd;
+}
+
+.Invoice table tr:last-child td:nth-child(4){
+  border-bottom: 1px solid #ddd;
+}
+
+.Invoice table tr:last-child td:nth-child(5){
+  border-bottom: 1px solid #ddd;
+}
+
+.Invoice-summary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Invoice-summary-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Invoice-summary-detail-total {
+  font-weight: bold;
+}
