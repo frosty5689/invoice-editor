@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteLineItem, updateLineItem } from '../redux/actions';
+import { CURRENCY_DECIMAL_PLACES } from '../constants';
 
-class InvoiceItem extends React.Component {
+
+export class InvoiceItem extends React.Component {
   render() {
     const item = this.props.item;
     const content = item.content;
@@ -11,8 +13,8 @@ class InvoiceItem extends React.Component {
       <tr className="Invoice-item">
         <td><input name="name" type="text" value={content.name} onChange={(e) => this.handleItemChange(e, item)}></input></td>
         <td><input name="quantity" type="number" min="1" value={content.quantity} onChange={(e) => this.handleItemChange(e, item)}></input></td>
-        <td>$<input name="price" type="number" min="0.01" step="0.01" value={toCurrency(content.price)} onChange={(e) => this.handleItemChange(e, item)}></input></td>
-        <td>${toCurrency(content.price * content.quantity)}</td>
+        <td>$<input name="price" type="number" min="0.01" step="0.01" value={this.toCurrency(content.price)} onChange={(e) => this.handleItemChange(e, item)}></input></td>
+        <td>${this.toCurrency(content.price * content.quantity)}</td>
         <td><button onClick={() => this.props.deleteLineItem(item.id)}>x</button></td>
       </tr>
     );
@@ -27,13 +29,15 @@ class InvoiceItem extends React.Component {
     content[name] = newValue;
     this.props.updateLineItem(id, content);
   }
+
+  toCurrency(number) {
+    return number.toFixed(CURRENCY_DECIMAL_PLACES);
+  }
 }
 
 
 
-function toCurrency(number) {
-  return number.toFixed(2);
-}
+
 
 export default connect(
   null,

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceSummary component InvoiceSummary should render correctly 1`] = `
+<div
+  className="Invoice-summary"
+>
+  <div>
+    <div
+      className="Invoice-summary-detail"
+    >
+      <span>
+        Subtotal
+      </span>
+      <span>
+          
+      </span>
+      <span>
+        $
+        29.32
+      </span>
+    </div>
+    <div
+      className="Invoice-summary-detail"
+    >
+      <span>
+        Tax (5%)
+      </span>
+      <span>
+          
+      </span>
+      <span>
+        $
+        1.47
+      </span>
+    </div>
+    <div
+      className="Invoice-summary-detail Invoice-summary-detail-total"
+    >
+      <span>
+        Total
+      </span>
+      <span>
+          
+      </span>
+      <span>
+        $
+        30.79
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Invoice component Invoice should render correctly 1`] = `
+<div
+  className="Invoice"
+>
+  <table>
+    <thead>
+      <tr
+        className="Invoice-head"
+      >
+        <td>
+          Item
+        </td>
+        <td>
+          Qty
+        </td>
+        <td>
+          Price
+        </td>
+        <td>
+          Total
+        </td>
+        <td />
+      </tr>
+    </thead>
+    <div />
+  </table>
+  <div />
+</div>
+`;

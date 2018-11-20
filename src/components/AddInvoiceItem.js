@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addLineItem } from '../redux/actions';
 
-class AddInvoiceItem extends React.Component {
+export class AddInvoiceItem extends React.Component {
   handleAddInvoiceItem() {
     this.props.addLineItem({name: '', quantity: 1, price: 0.00});
   };

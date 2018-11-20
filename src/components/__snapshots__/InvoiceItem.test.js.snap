@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceItem component InvoiceItem should render correctly 1`] = `
+<tr
+  className="Invoice-item"
+>
+  <td>
+    <input
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value="Widget"
+    />
+  </td>
+  <td>
+    <input
+      min="1"
+      name="quantity"
+      onChange={[Function]}
+      type="number"
+      value={2}
+    />
+  </td>
+  <td>
+    $
+    <input
+      min="0.01"
+      name="price"
+      onChange={[Function]}
+      step="0.01"
+      type="number"
+      value="10.22"
+    />
+  </td>
+  <td>
+    $
+    20.44
+  </td>
+  <td>
+    <button
+      onClick={[Function]}
+    >
+      x
+    </button>
+  </td>
+</tr>
+`;

@@ -4,7 +4,7 @@ import InvoiceItem from './InvoiceItem';
 import AddInvoiceItem from './AddInvoiceItem';
 import { getLineItems } from '../redux/selectors';
 
-const InvoiceItemList = ({ lineItems }) => {
+export const InvoiceItemList = ({ lineItems }) => {
   const invoiceItems = lineItems && lineItems.length ? lineItems.map((item, index) => {
     return <InvoiceItem key={item.id} item={item} />;
   }) : null;

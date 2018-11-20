@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceItemList component InvoiceItemList should render correctly 1`] = `
+<tbody>
+  <tr>
+    <td>
+      <div />
+    </td>
+    <td />
+    <td />
+    <td />
+    <td />
+  </tr>
+</tbody>
+`;
