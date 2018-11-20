@@ -2,7 +2,6 @@ import React from 'react';
 import { InvoiceItemList } from './InvoiceItemList';
 import renderer from 'react-test-renderer';
 
-
 jest.mock('./AddInvoiceItem', () => {
   const AddInvoiceItemMock = () => <div />;
   return AddInvoiceItemMock;
