@@ -1,0 +1,14 @@
+.InvoiceItemList-fade-enter {
+  opacity: 0.01;
+}
+.InvoiceItemList-fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.InvoiceItemList-fade-exit {
+  opacity: 1;
+}
+.InvoiceItemList-fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}

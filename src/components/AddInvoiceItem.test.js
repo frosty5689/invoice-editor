@@ -18,8 +18,6 @@ describe('InvoiceItem component', () => {
   });
 
   it('AddInvoiceItem add calls addLineItemFn', () => {
-
-    //addLineItem
     const mockAddLineItemFn = jest.fn();
     const component = shallow(
       <AddInvoiceItem addLineItem={mockAddLineItemFn}/>,

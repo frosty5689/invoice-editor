@@ -1,0 +1,15 @@
+.Invoice-delete-item {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: gray;
+  cursor: pointer;
+}
+
+.Invoice-delete-item:hover {
+  color: red;
+}
+
+.Invoice-delete-item:focus {
+  outline: 0;
+}

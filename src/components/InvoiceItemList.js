@@ -3,23 +3,40 @@ import { connect } from 'react-redux';
 import InvoiceItem from './InvoiceItem';
 import AddInvoiceItem from './AddInvoiceItem';
 import { getLineItems } from '../redux/selectors';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
+import '../css/InvoiceItemList.css';
 
 export const InvoiceItemList = ({ lineItems }) => {
   const invoiceItems = lineItems && lineItems.length ? lineItems.map((item, index) => {
-    return <InvoiceItem key={item.id} item={item} />;
+    return (
+      <CSSTransition
+        classNames="InvoiceItemList-fade"
+        timeout={400}
+        key={item.id}>
+        <InvoiceItem item={item} />
+      </CSSTransition>
+    );
   }) : null;
 
   return (
-    <tbody>
+
+    <TransitionGroup
+      className="InvoiceItemList-group"
+      component="tbody">
+
       {invoiceItems}
-      <tr>
-        <td><AddInvoiceItem /></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
+
+      <CSSTransition classNames="InvoiceItemList-fade" timeout={400}>
+        <tr>
+          <td><AddInvoiceItem /></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </CSSTransition>
+    </TransitionGroup>
   );
 }
 

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InvoiceItemList component InvoiceItemList should render correctly 1`] = `
-<tbody>
+<tbody
+  className="InvoiceItemList-group"
+>
   <tr>
     <td>
       <div />

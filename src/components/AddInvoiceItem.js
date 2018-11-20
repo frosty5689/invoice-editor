@@ -1,6 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addLineItem } from '../redux/actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+
+import '../css/AddInvoiceItem.css';
 
 export class AddInvoiceItem extends React.Component {
   handleAddInvoiceItem() {
@@ -9,7 +13,7 @@ export class AddInvoiceItem extends React.Component {
 
   render() {
     return (
-      <button onClick={() => this.handleAddInvoiceItem()}>New Item</button>
+      <button className="Invoice-add-item" onClick={() => this.handleAddInvoiceItem()}><FontAwesomeIcon icon={faPlusSquare} size="2x" /></button>
     );
   }
 }

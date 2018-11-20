@@ -12,9 +12,9 @@ exports[`App component App should render correctly 1`] = `
       className="App-logo"
       src="logo.svg"
     />
-    <h2>
+    <h3>
       Welcome to Invoice Editor
-    </h2>
+    </h3>
   </div>
   <div />
 </div>

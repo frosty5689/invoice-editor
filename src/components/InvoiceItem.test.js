@@ -34,7 +34,7 @@ describe('InvoiceItem component', () => {
         price: 10.22
       }
     }
-    //deleteLineItem
+
     const mockDeleteLineItemFn = jest.fn();
     const component = shallow(
       <InvoiceItem key={item.id} item={item} deleteLineItem={mockDeleteLineItemFn} />,
@@ -56,7 +56,7 @@ describe('InvoiceItem component', () => {
     }
 
     const event = { target: { name: 'name', value: 'Cogs' } };
-    //updateLineItem
+
     const mockUpdateLineItemFn = jest.fn();
     const component = shallow(
       <InvoiceItem key={item.id} item={item} updateLineItem={mockUpdateLineItemFn} />,
@@ -80,7 +80,7 @@ describe('InvoiceItem component', () => {
     }
 
     const event = { target: { name: 'quantity', value: 4 } };
-    //updateLineItem
+
     const mockUpdateLineItemFn = jest.fn();
     const component = shallow(
       <InvoiceItem key={item.id} item={item} updateLineItem={mockUpdateLineItemFn} />,
@@ -104,7 +104,7 @@ describe('InvoiceItem component', () => {
     }
 
     const event = { target: { name: 'price', value: 6.22 } };
-    //updateLineItem
+
     const mockUpdateLineItemFn = jest.fn();
     const component = shallow(
       <InvoiceItem key={item.id} item={item} updateLineItem={mockUpdateLineItemFn} />,
